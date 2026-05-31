@@ -3,462 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Курс Куратор — Lobanovska Metabolic Code</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Курс Куратор</title>
 
 <style>
-:root{
-  --navy:#1b2a37;
-  --navy2:#253645;
-  --cream:#f7f3ec;
-  --beige:#e0dcd2;
-  --gold:#b8a07a;
-  --text:#5f5c58;
-  --white:#faf8f5;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
 body{
-  font-family:'Jost',sans-serif;
-  background:var(--white);
-  color:var(--navy);
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#faf8f5;
+  color:#1b2a37;
 }
 
-a{text-decoration:none}
+.container{
+  max-width:640px;
+  margin:auto;
+  padding:24px 18px 40px;
+}
 
 .hero{
-  background:var(--navy);
-  color:var(--beige);
-  padding:56px 24px 48px;
+  background:#1b2a37;
+  color:#e0dcd2;
+  padding:32px 22px;
+  border-radius:22px;
   text-align:center;
-}
-
-.badge{
-  display:inline-block;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  padding:7px 16px;
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:22px;
 }
 
 .hero h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:52px;
-  font-weight:300;
-  line-height:1.05;
-  margin-bottom:18px;
-}
-
-.hero h1 em{
-  color:var(--gold);
-  font-style:italic;
+  font-size:34px;
+  margin:0 0 12px;
 }
 
 .hero p{
-  max-width:680px;
-  margin:0 auto 28px;
   font-size:15px;
-  line-height:1.8;
-  color:rgba(224,220,210,.78);
-}
-
-.buttons{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  font-size:12px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  font-weight:500;
-}
-
-.btn-gold{
-  background:var(--gold);
-  color:var(--navy);
-}
-
-.btn-outline{
-  border:1px solid rgba(224,220,210,.35);
-  color:var(--beige);
-}
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  background:var(--beige);
-}
-
-.stat{
-  padding:24px 18px;
-  text-align:center;
-  border-right:1px solid rgba(27,42,55,.12);
-}
-
-.stat:last-child{border-right:none}
-
-.stat strong{
-  display:block;
-  font-family:'Cormorant Garamond',serif;
-  font-size:34px;
-  font-weight:400;
-}
-
-.stat span{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  color:var(--text);
+  line-height:1.6;
+  margin:0;
 }
 
 .section{
-  padding:58px 24px;
-  max-width:1080px;
-  margin:auto;
+  background:white;
+  margin-top:18px;
+  padding:22px;
+  border-radius:20px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
 }
 
-.section-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:38px;
-  font-weight:300;
-  text-align:center;
-  margin-bottom:14px;
+h2{
+  font-size:22px;
+  margin:0 0 14px;
 }
 
-.section-subtitle{
-  max-width:720px;
-  margin:0 auto 36px;
-  text-align:center;
-  color:var(--text);
-  line-height:1.7;
-  font-size:14px;
+p, li{
+  font-size:15px;
+  line-height:1.6;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.card{
-  background:var(--cream);
-  padding:28px;
-  border-left:3px solid var(--gold);
-}
-
-.card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  font-weight:400;
-  margin-bottom:12px;
-}
-
-.card p,
-.card li{
-  color:var(--text);
-  line-height:1.75;
-  font-size:14px;
-}
-
-.card ul{
-  margin-left:18px;
-}
-
-.dark{
-  background:var(--navy);
-  color:var(--beige);
-  max-width:none;
-}
-
-.dark-inner{
-  max-width:1080px;
-  margin:auto;
-}
-
-.dark .section-title{color:var(--beige)}
-.dark .section-subtitle{color:rgba(224,220,210,.68)}
-
-.modules{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
+ul{
+  padding-left:20px;
+  margin:0;
 }
 
 .module{
-  background:var(--navy2);
-  padding:28px;
-  border-left:3px solid var(--gold);
+  border-left:4px solid #b8a07a;
+  padding-left:14px;
+  margin-bottom:22px;
 }
 
-.module span{
-  color:var(--gold);
-  font-family:'Cormorant Garamond',serif;
-  font-size:34px;
+.module:last-child{
+  margin-bottom:0;
 }
 
 .module h3{
-  font-size:19px;
-  margin:12px 0;
-  color:var(--beige);
+  margin:0 0 8px;
+  font-size:18px;
 }
 
-.module ul{
-  margin-left:18px;
-  color:rgba(224,220,210,.72);
-  line-height:1.8;
-  font-size:14px;
+.module p{
+  margin:0 0 10px;
 }
 
-.benefits{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-}
-
-.benefit{
-  background:white;
-  padding:24px;
-  border-top:2px solid var(--gold);
-}
-
-.benefit h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-.benefit p{
-  color:var(--text);
-  line-height:1.75;
-  font-size:14px;
-}
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 2fr;
-  gap:36px;
-  align-items:center;
-}
-
-.photo{
-  aspect-ratio:3/4;
-  background:var(--beige);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Cormorant Garamond',serif;
-  font-size:76px;
-  color:rgba(27,42,55,.22);
-}
-
-.about p{
-  color:var(--text);
-  font-size:15px;
-  line-height:1.85;
-  margin-bottom:16px;
-}
-
-.cta{
-  background:var(--navy);
-  color:var(--beige);
+.btn{
+  display:block;
+  background:#b8a07a;
+  color:#1b2a37;
   text-align:center;
-  padding:64px 24px;
+  padding:15px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:16px;
 }
 
-.cta h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:44px;
-  font-weight:300;
-  margin-bottom:16px;
-}
-
-.cta p{
-  color:rgba(224,220,210,.7);
-  margin-bottom:28px;
-}
-
-@media(max-width:768px){
-  .hero h1{font-size:40px}
-  .stats,.grid,.benefits,.about{grid-template-columns:1fr}
-  .stat{border-right:none;border-bottom:1px solid rgba(27,42,55,.12)}
-  .section{padding:46px 20px}
+.btn-dark{
+  background:#1b2a37;
+  color:white;
 }
 </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="badge">Lobanovska Metabolic Code</div>
+<div class="container">
 
-  <h1>Курс <em>“Куратор”</em></h1>
-
-  <p>
-    Системна програма для спеціалістів, які хочуть працювати впевнено, доказово,
-    структурно та підвищити цінність своїх консультацій.
-  </p>
-
-  <div class="buttons">
-    <a class="btn btn-gold" href="#program">Дивитись програму</a>
-    <a class="btn btn-outline" href="#cta">Хочу на курс</a>
-  </div>
-</header>
-
-<section class="stats">
-  <div class="stat">
-    <strong>8+</strong>
-    <span>років у нутріціології</span>
-  </div>
-  <div class="stat">
-    <strong>100К+</strong>
-    <span>випускників онлайн і офлайн</span>
-  </div>
-  <div class="stat">
-    <strong>🇨🇦</strong>
-    <span>стажування в Канаді</span>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Для кого цей курс</h2>
-  <p class="section-subtitle">
-    Для спеціалістів, які хочуть не просто давати поради, а вести клієнта через зрозумілу систему.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Для нутріціологів</h3>
-      <p>Яким потрібна структура консультацій, алгоритми роботи та впевненість у рекомендаціях.</p>
-    </div>
-
-    <div class="card">
-      <h3>Для лікарів і фахівців</h3>
-      <p>Які хочуть поглибити розуміння харчування, метаболізму та супроводу клієнтів.</p>
-    </div>
-
-    <div class="card">
-      <h3>Для тих, хто хоче дорожче</h3>
-      <p>Щоб перейти з хаотичних консультацій у формат експертного супроводу з вищим чеком.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section dark" id="program">
-  <div class="dark-inner">
-    <h2 class="section-title">Програма курсу</h2>
-    <p class="section-subtitle">
-      Курс побудований навколо практичних блоків: мислення спеціаліста, доказові інструменти та супровід клієнта.
+  <div class="hero">
+    <h1>Курс “Куратор”</h1>
+    <p>
+      Системна програма для спеціалістів, які хочуть працювати
+      структурно, доказово та впевнено.
     </p>
+  </div>
 
-    <div class="modules">
+  <div class="section">
+    <h2>Для кого курс</h2>
+    <ul>
+      <li>для нутріціологів, які хочуть більше структури</li>
+      <li>для лікарів та фахівців у сфері здоров’я</li>
+      <li>для спеціалістів, які хочуть підвищити цінність консультацій</li>
+    </ul>
+  </div>
 
-      <div class="module">
-        <span>01</span>
-        <h3>Клінічне мислення та алгоритм роботи</h3>
-        <ul>
-          <li>як збирати анамнез без хаосу</li>
-          <li>як бачити логіку запиту клієнта</li>
-          <li>червоні прапори: коли треба направити до лікаря</li>
-          <li>алгоритм старту роботи з клієнтом</li>
-        </ul>
-      </div>
+  <div class="section">
+    <h2>Програма курсу</h2>
 
-      <div class="module">
-        <span>02</span>
-        <h3>Доказові інструменти та суплементація</h3>
-        <ul>
-          <li>робота з аналізами та базовими маркерами</li>
-          <li>інсулінорезистентність і метаболічний синдром</li>
-          <li>дефіцити та суплементація без хаотичних призначень</li>
-          <li>як пояснювати рекомендації клієнту простою мовою</li>
-        </ul>
-      </div>
+    <div class="module">
+      <h3>01. Клінічне мислення та алгоритм роботи</h3>
+      <p><strong>Навчитеся працювати системно, а не інтуїтивно.</strong></p>
+      <ul>
+        <li>як правильно збирати анамнез</li>
+        <li>як аналізувати запит клієнта та знаходити справжню причину проблеми</li>
+        <li>червоні прапори: коли клієнта потрібно направити до лікаря</li>
+        <li>алгоритм першої консультації</li>
+        <li>логіка ведення клієнта від першої зустрічі до результату</li>
+      </ul>
+    </div>
 
-      <div class="module">
-        <span>03</span>
-        <h3>Супровід, комплаєнс і зростання доходу</h3>
-        <ul>
-          <li>як будувати консультацію, щоб клієнт розумів цінність</li>
-          <li>робота зі зривами та низькою дисципліною</li>
-          <li>як підвищити чек через структуру та експертність</li>
-          <li>як перейти до формату довгострокового супроводу</li>
-        </ul>
-      </div>
+    <div class="module">
+      <h3>02. Доказові інструменти та суплементація</h3>
+      <p><strong>Без хаотичних призначень і модних схем.</strong></p>
+      <ul>
+        <li>які аналізи справді важливі у роботі спеціаліста</li>
+        <li>інсулінорезистентність та метаболічний синдром</li>
+        <li>робота з дефіцитами</li>
+        <li>основи доказової суплементації</li>
+        <li>як аргументувати свої рекомендації клієнту</li>
+      </ul>
+    </div>
 
+    <div class="module">
+      <h3>03. Супровід клієнта та розвиток практики</h3>
+      <p><strong>Перетворіть знання на результат для клієнта та стабільний дохід для себе.</strong></p>
+      <ul>
+        <li>як побудувати консультацію, щоб клієнт бачив цінність вашої роботи</li>
+        <li>робота зі зривами та низькою мотивацією</li>
+        <li>комплаєнс: як допомогти клієнту дотримуватись рекомендацій</li>
+        <li>довгостроковий супровід</li>
+        <li>позиціонування експерта та підвищення вартості послуг</li>
+      </ul>
     </div>
   </div>
-</section>
 
-<section class="section">
-  <h2 class="section-title">Що ви отримаєте</h2>
-
-  <div class="benefits">
-    <div class="benefit">
-      <h3>Систему роботи</h3>
-      <p>Чітке розуміння, як вести клієнта від першого запиту до результату.</p>
-    </div>
-
-    <div class="benefit">
-      <h3>Алгоритми консультацій</h3>
-      <p>Структуру розбору, питання для анамнезу та логіку прийняття рішень.</p>
-    </div>
-
-    <div class="benefit">
-      <h3>Впевненість у рекомендаціях</h3>
-      <p>Менше хаосу, більше доказовості, чіткіше пояснення клієнтам.</p>
-    </div>
-
-    <div class="benefit">
-      <h3>Ріст експертності</h3>
-      <p>Можливість позиціонувати себе дорожче через якість, структуру та глибину роботи.</p>
-    </div>
+  <div class="section">
+    <h2>Що ви отримаєте</h2>
+    <ul>
+      <li>чітку систему роботи з клієнтом</li>
+      <li>алгоритми консультацій</li>
+      <li>впевненість у рекомендаціях</li>
+      <li>більше експертності та структури</li>
+    </ul>
   </div>
-</section>
 
-<section class="section">
-  <div class="about">
-    <div class="photo">КЛ</div>
-
-    <div>
-      <h2 class="section-title" style="text-align:left;margin-bottom:20px;">Автор курсу</h2>
-
-      <p>
-        Лобановська Крістіна Юріївна — лікар-педіатр, дієтолог,
-        лектор міжнародного університету нутріціології.
-      </p>
-
-      <p>
-        У нутріціології понад 8 років. Автор курсів, онлайн та офлайн груп,
-        автор проєкту Lobanovska Metabolic Code та коуч.
-      </p>
-
-      <p>
-        Понад 100 000 випускників пройшли її навчальні програми.
-      </p>
-    </div>
+  <div class="section">
+    <h2>Автор курсу</h2>
+    <p>
+      Крістіна Лобановська — лікар-педіатр, дієтолог,
+      лектор міжнародного університету нутріціології,
+      автор проєкту Lobanovska Metabolic Code.
+    </p>
+    <p>
+      Понад 8 років у нутріціології та 100 000+ випускників онлайн і офлайн програм.
+    </p>
   </div>
-</section>
 
-<section class="cta" id="cta">
-  <h2>Хочете дізнатися деталі?</h2>
-  <p>Залиште заявку або напишіть питання — вам підкажуть умови участі та найближчий старт.</p>
+  <div class="section">
+    <h2>Хочете на курс?</h2>
+    <p>Натисніть кнопку нижче, щоб залишити заявку або дізнатися деталі.</p>
 
-  <div class="buttons">
-    <a class="btn btn-gold" href="https://calendly.com/ТВОЄ-ПОСИЛАННЯ" target="_blank">Хочу на курс</a>
-    <a class="btn btn-outline" href="https://t.me/ТВОЄ_ІМЯ" target="_blank">Задати питання</a>
+    <a class="btn" href="https://calendly.com/ТВОЄ-ПОСИЛАННЯ" target="_blank">
+      Хочу на курс
+    </a>
+
+    <a class="btn btn-dark" href="https://t.me/ТВОЄ_ІМЯ" target="_blank">
+      Задати питання
+    </a>
   </div>
-</section>
+
+</div>
 
 </body>
 </html>
